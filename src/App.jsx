@@ -1,18 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavigationBar from "./components/NavigationBar.jsx";
 import HomePage from "./components/HomePage.jsx";
 import Product from "./components/Product.jsx";
 import products from "./dummyData.js";
+import ProductList from "./components/ProductList.jsx";
 
 function App() {
   const [data, setData] = useState([]);
-  setData(products);
+
+  useEffect(() => {
+    setData(products);
+  }, []); // <- empty dependency array = run once on mount
 
   return (
     <>
       <NavigationBar />
-      <HomePage />
-      <ProductList products={data} />
+      {/* <HomePage /> */}
+      <ProductList data={data} />
     </>
   );
 }
