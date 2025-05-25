@@ -7,9 +7,12 @@ link : https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart
 ### Components i need
 
 - App
-- NanigationBar
-- ProductCart
-- InfoCart
+- HomePage
+- NavigationBar
+- Product
+- ProductsPage
+- ShoopingCart
+- Footer
 
 ### What i need to do
 
