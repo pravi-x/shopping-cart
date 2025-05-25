@@ -1,3 +1,17 @@
 # Project: Shopping Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+link : https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart
+
+## Notes
+
+### Components i need
+
+- App
+- NanigationBar
+- ProductCart
+- InfoCart
+
+### What i need to do
+
+- SPA routes
+-
