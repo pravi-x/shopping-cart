@@ -11,6 +11,11 @@ function ProductList({ data }) {
     slidesToScroll: 1,
     arrows: true,
     adaptiveHeight: true,
+    lazyLoad: "ondemand",
+    swipeToSlide: true,
+
+    centerMode: true,
+    centerPadding: "60px",
   };
   console.log("Products data:", data);
 
