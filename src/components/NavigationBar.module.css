@@ -1,15 +1,52 @@
 .navContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   color: white;
-  padding: 1rem;
+  padding: 1rem 2rem;
   background-color: #535bf2;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+
+  padding: 1rem 2rem;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-.navLink:hover {
-  border-bottom: 2px solid #fff;
+.scrolled {
+  background-color: rgba(83, 91, 242, 0.8);
+  backdrop-filter: blur(5px);
 }
+
+.leftLinks,
+.rightLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
 .navLink {
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 4px;
 }
-.navCartIcon {
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
 }
