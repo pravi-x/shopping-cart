@@ -1,2 +1,9 @@
-.tilte {
+.title {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 600;
+  color: #e6ebf0;
+  text-align: center;
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
