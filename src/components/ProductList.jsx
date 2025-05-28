@@ -1,8 +1,11 @@
 import Slider from "react-slick";
+import { useContext } from "react";
 import Product from "./Product";
 import styles from "./ProductList.module.css";
+import { ProductContext } from "../App";
 
-function ProductList({ data }) {
+function ProductList() {
+  const data = useContext(ProductContext);
   const settings = {
     dots: true,
     infinite: true,
