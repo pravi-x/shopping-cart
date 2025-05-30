@@ -1,5 +1,7 @@
 import { useEffect, useState, createContext } from "react";
 import NavigationBar from "./components/NavigationBar.jsx";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // import products from "./dummyData.js";
 export const ProductContext = createContext();
@@ -34,6 +36,7 @@ function App() {
     <ProductContext.Provider value={{ data, setData, isLoading }}>
       <NavigationBar />
       <Outlet />
+      <ToastContainer position="bottom-center" />
     </ProductContext.Provider>
   );
 }

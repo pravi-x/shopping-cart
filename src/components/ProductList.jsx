@@ -3,6 +3,7 @@ import { useContext } from "react";
 import Product from "./Product";
 import styles from "./ProductList.module.css";
 import { ProductContext } from "../App";
+import { toast } from "react-toastify";
 
 function ProductList() {
   const { data, setData, isLoading } = useContext(ProductContext);
@@ -28,6 +29,15 @@ function ProductList() {
         item.id === p.id ? { ...item, countInCart: item.countInCart + 1 } : item
       )
     );
+    toast.success(`${p.title} added!`, {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "colored",
+    });
   }
 
   return (
