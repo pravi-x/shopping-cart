@@ -7,3 +7,47 @@
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.95rem;
+  background-color: #1f2937; /* dark background */
+  color: #e6ebf0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.table th {
+  background-color: #374151; /* slightly lighter dark */
+  font-weight: 600;
+  color: #f9fafb;
+  letter-spacing: 0.02em;
+}
+
+.table tr:nth-child(even) {
+  background-color: #2c3a4a;
+}
+
+.table tr:hover {
+  background-color: #334155;
+  transition: background-color 0.3s ease;
+}
+
+.totalRow {
+  font-weight: 600;
+  background-color: transparent;
+  text-align: right;
+  padding-top: 1rem;
+  font-size: 1.1rem;
+  color: #f9fafb;
+}

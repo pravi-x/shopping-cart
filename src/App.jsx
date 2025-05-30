@@ -16,7 +16,7 @@ function App() {
   }, []); // <- empty dependency array = run once on mount
 
   return (
-    <ProductContext.Provider value={data}>
+    <ProductContext.Provider value={{ data, setData }}>
       <NavigationBar />
       <Outlet />
     </ProductContext.Provider>
