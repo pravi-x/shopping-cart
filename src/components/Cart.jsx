@@ -8,7 +8,7 @@ function Cart() {
   function removeProduct(p) {
     setData((prev) =>
       prev.map((item) =>
-        item.name === p.name
+        item.id === p.id
           ? { ...item, countInCart: Math.max(item.countInCart - 1, 0) }
           : item
       )
@@ -18,9 +18,7 @@ function Cart() {
   function addProduct(p) {
     setData((prev) =>
       prev.map((item) =>
-        item.name === p.name
-          ? { ...item, countInCart: item.countInCart + 1 }
-          : item
+        item.id === p.id ? { ...item, countInCart: item.countInCart + 1 } : item
       )
     );
   }
@@ -47,7 +45,7 @@ function Cart() {
             .map((p, i) => (
               <tr key={i}>
                 <td>{i + 1}</td>
-                <td>{p.name}</td>
+                <td>{p.title}</td>
                 <td>
                   <button onClick={() => removeProduct(p)}>-</button>
                   {"  "}

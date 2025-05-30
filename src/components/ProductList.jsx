@@ -5,7 +5,7 @@ import styles from "./ProductList.module.css";
 import { ProductContext } from "../App";
 
 function ProductList() {
-  const { data, setData } = useContext(ProductContext);
+  const { data, setData, isLoading } = useContext(ProductContext);
   const settings = {
     dots: true,
     infinite: true,
@@ -25,29 +25,32 @@ function ProductList() {
   function handleAddToCart(p) {
     setData((prev) =>
       prev.map((item) =>
-        item.name === p.name
-          ? { ...item, countInCart: item.countInCart + 1 }
-          : item
+        item.id === p.id ? { ...item, countInCart: item.countInCart + 1 } : item
       )
     );
   }
 
   return (
     <>
+      <br />
       <h1 className={styles.centerTitle}>Products</h1>
-      <div style={{ padding: "1rem" }}>
-        <Slider {...settings}>
-          {data.map((p, i) => (
-            <Product
-              key={i}
-              name={p.name}
-              img={p.img}
-              price={p.price}
-              onClick={() => handleAddToCart(p)}
-            />
-          ))}
-        </Slider>
-      </div>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <div style={{ padding: "1rem" }}>
+          <Slider {...settings}>
+            {data.map((p, i) => (
+              <Product
+                key={i}
+                name={p.title}
+                img={p.image}
+                price={p.price}
+                onClick={() => handleAddToCart(p)}
+              />
+            ))}
+          </Slider>
+        </div>
+      )}
     </>
   );
 }
