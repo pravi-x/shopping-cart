@@ -10,17 +10,16 @@ function ProductList() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: true,
-    adaptiveHeight: true,
-    lazyLoad: "ondemand",
-    swipeToSlide: true,
-
     centerMode: true,
-    centerPadding: "60px",
+    centerPadding: "0px",
+    arrows: false,
+    swipeToSlide: true,
+    lazyLoad: "ondemand",
   };
+
   console.log("Products data:", data);
 
   function handleAddToCart(p) {
@@ -47,7 +46,7 @@ function ProductList() {
       {isLoading ? (
         <p>Loading...</p>
       ) : (
-        <div style={{ padding: "1rem" }}>
+        <div className={styles.sliderWrapper}>
           <Slider {...settings}>
             {data.map((p, i) => (
               <Product
