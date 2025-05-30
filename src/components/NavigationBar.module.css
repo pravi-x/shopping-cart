@@ -11,8 +11,6 @@
   padding: 1rem 2rem;
   background-color: #535bf2;
   transition: background-color 0.3s ease, opacity 0.3s ease;
-
-  padding: 1rem 2rem;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -28,23 +26,29 @@
   gap: 1.5rem;
 }
 
+/* Solution 1: Using ::after with proper positioning */
 .navLink {
   position: relative;
   cursor: pointer;
-  padding-bottom: 4px;
+  padding-bottom: 6px; /* Increased padding for space */
+  color: white !important; /* Force color to stay */
+  text-decoration: none;
+  display: inline-block;
+  overflow: visible; /* Ensure content isn't clipped */
 }
 
 .navLink::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 2px; /* Moved up slightly from bottom */
   height: 2px;
   width: 100%;
   background-color: white;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
+  pointer-events: none; /* Prevent interaction issues */
 }
 
 .navLink:hover::after {

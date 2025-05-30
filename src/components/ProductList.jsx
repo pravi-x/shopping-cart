@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import { useContext } from "react";
 import Product from "./Product";
 import styles from "./ProductList.module.css";
-import { ProductContext } from "../App";
+import { ProductContext } from "../ProductContext";
 import { toast } from "react-toastify";
 
 function ProductList() {

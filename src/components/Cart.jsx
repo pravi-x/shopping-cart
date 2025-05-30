@@ -1,5 +1,5 @@
 import styles from "./Cart.module.css";
-import { ProductContext } from "../App";
+import { ProductContext } from "../ProductContext";
 import { useContext } from "react";
 
 function Cart() {
