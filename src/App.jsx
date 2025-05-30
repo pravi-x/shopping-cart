@@ -9,6 +9,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { Outlet } from "react-router-dom";
 import { ProductContext } from "./ProductContext.jsx";
 
+import { Analytics } from "@vercel/analytics/next";
+
 function App() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -36,6 +38,7 @@ function App() {
       <NavigationBar />
       <Outlet />
       <Footer />
+      <Analytics />
       <ToastContainer position="bottom-center" />
     </ProductContext.Provider>
   );
