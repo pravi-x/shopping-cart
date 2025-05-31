@@ -23,6 +23,12 @@
 .leftLinks,
 .rightLinks {
   display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  height: 50px;
   gap: 1.5rem;
 }
 

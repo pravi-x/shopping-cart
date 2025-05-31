@@ -18,7 +18,8 @@ function NavigationBar() {
       className={`${styles.navContainer} ${isScrolled ? styles.scrolled : ""}`}
     >
       <div className={styles.leftLinks}>
-        <Link to="/" className={styles.navLink}>
+        <img src="/src/assets/logo.JPG" alt="Logo" className={styles.logo} />
+ <Link to="/" className={styles.navLink}>
           Home
         </Link>
         <Link to="/products" className={styles.navLink}>
